@@ -28,7 +28,7 @@ public interface UserMapper {
 	})
 	User getOne(Long id);
 
-	@Insert("INSERT INTO users(userName,passWord,user_sex) VALUES(#{userName}, #{passWord}, #{userSex})")
+	@Insert("INSERT INTO users(userName,passWord,user_sex,nick_name) VALUES(#{userName}, #{passWord}, #{userSex}, #{nickName})")
 	void insert(User user);
 
 	@Update("UPDATE users SET userName=#{userName},nick_name=#{nickName} WHERE id =#{id}")
